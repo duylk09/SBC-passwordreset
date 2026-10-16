@@ -66,3 +66,14 @@ h1.title{font-size:26px;line-height:1.25;text-wrap:pretty;}
 .btn-sec{min-height:48px;border:1px solid #d6d7da;border-radius:14px;font-size:15px;background:#fff;}
 .btn-reset{border-color:var(--err);color:oklch(0.5 0.18 25);font-weight:600;}
 .btn-reset:hover{background:oklch(0.97 0.02 25);}
+.input.code{letter-spacing:.3em;font-variant-numeric:tabular-nums;}
+.help{font-size:13px;color:#6b6e74;}
+.who{background:#fff;border:1px solid #e1e2e4;border-radius:16px;padding:20px 18px;display:flex;flex-direction:column;gap:6px;}
+.who-name{font-size:22px;font-weight:700;line-height:1.3;word-break:break-word;}
+.who-id{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:28px;font-weight:600;letter-spacing:.04em;text-align:start;}
+.status{display:flex;gap:12px;align-items:center;background:var(--tint);color:var(--primary-hover);border-radius:12px;padding:14px;font-size:15px;line-height:1.45;}
+.spinner{flex:none;width:20px;height:20px;border-radius:50%;border:2.5px solid currentColor;border-right-color:transparent;animation:spin .9s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+@media (prefers-reduced-motion:reduce){.spinner{animation:none;}}
+.done{display:flex;gap:10px;align-items:center;font-size:16px;font-weight:600;color:oklch(0.42 0.12 150);}
+.done i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ok);color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:13px;font-weight:700;}

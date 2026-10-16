@@ -1,0 +1,22 @@
+# Render Blueprint. Must stay a single instance: queue state is held in memory.
+services:
+  - type: web
+    name: sbc-passwordreset
+    runtime: node
+    plan: starter
+    region: frankfurt
+    buildCommand: npm install --omit=dev
+    startCommand: node server/server.js
+    healthCheckPath: /healthz
+    numInstances: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: TRUST_PROXY
+        value: "1"
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: WORKER_TOKEN
+        sync: false
+      - key: PUBLIC_KEY_JWK
+        sync: false
